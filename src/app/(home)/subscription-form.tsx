@@ -8,6 +8,8 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { Button } from "@/app/components/button"
 import { InputRoot, InputIcon, InputField } from "@/app/components/input"
 
+import { subscribeToEvent } from "@/http/api"
+
 const subscriptionSchema = z.object({
   name: z.string().min(2, 'Digite seu nome completo'),
   email: z.string().email('Digite um e-mail válido'),
@@ -21,9 +23,10 @@ export function SubscriptionForm() {
     resolver: zodResolver(subscriptionSchema),
   })
 
-  function onSubscribe(data: SubscriptionData) {
-   console.log(data)
+  async function onSubscribe({ name, email }: SubscriptionData) {
+   const { subscriberId } = await subscribeToEvent({ name, email })
   }
+
   return (
     <form
       onSubmit={handleSubmit(onSubscribe)} 

@@ -1,10 +1,10 @@
 
 ---
 
-<h1 align="center">📥 Devstage</h1>
+<h1 align="center">📥  Devstage</h1>
 
 <p align="center">
-  <img src="https://imgur.com/a/muLOopu.png" alt="PizzaShop Dashboard" width="100%" />
+  <img src="https://imgur.com/a/devstage-Uc9QSc3" alt="Devstage" width="100%" />
 </p>
 
 <p align="center">
@@ -36,14 +36,14 @@
 O projeto foi desenvolvido com as seguintes ferramentas e bibliotecas modernas:
 
 - **Frameworks e Bibliotecas**
-  - [NextJS]
-  - [TypeScript]
-  - [TailwindCSS]
-  - [Tailwind Merge]
-  - [Lucide Icons]
-  - [React Hook Form]
-  - [Zod]
-  - []
+  - [NextJS](https://nextjs.org/)
+  - [TypeScript](https://www.typescriptlang.org/)
+  - [TailwindCSS](https://tailwindcss.com/)
+  - [Tailwind Merge](https://www.npmjs.com/package/tailwind-merge)
+  - [Lucide Icons](https://lucide.dev/)
+  - [React Hook Form](https://www.react-hook-form.com/)
+  - [Zod](https://zod.dev/)
+  - [Orval](https://orval.dev/)
 
 ---
 
@@ -104,7 +104,7 @@ Por padrão, o servidor backend estará rodando em `http://localhost:3333`. Cert
 
 A documentação da API está disponível em:
 
-`http://localhost:3333/docs`
+[http://localhost:3333/docs](http://localhost:3333/docs)
 
 Acesse para visualizar os endpoints, requisições e respostas suportadas pelo backend. 📝
 
