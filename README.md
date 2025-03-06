@@ -1,34 +1,119 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+---
 
-First, run the development server:
+<h1 align="center">📥 Devstage</h1>
+
+<p align="center">
+  <img src="https://imgur.com/a/muLOopu.png" alt="PizzaShop Dashboard" width="100%" />
+</p>
+
+<p align="center">
+  <b>Plataforma para conectar desenvolvedores a comunidades e oportunidades em tecnologia. 🚀</b>
+</p>
+
+---
+
+## 📋 Índice
+
+- [📖 Sobre](#-sobre)
+- [🛠 Tecnologias Utilizadas](#-tecnologias-utilizadas)
+- [📦 Como Baixar e Rodar o Projeto](#-como-baixar-e-rodar-o-projeto)
+- [🔗 Conexão com o Backend](#-conexão-com-o-backend)
+- [👩‍💻 Desenvolvedora](#-desenvolvedora)
+
+---
+
+## 📖 Sobre
+
+**Devstage** é uma plataforma para conectar desenvolvedores a comunidades e oportunidades em tecnologia.
+
+> Com uma interface amigável e responsiva!
+
+---
+
+## 🛠 Tecnologias Utilizadas
+
+O projeto foi desenvolvido com as seguintes ferramentas e bibliotecas modernas:
+
+- **Frameworks e Bibliotecas**
+  - [NextJS]
+  - [TypeScript]
+  - [TailwindCSS]
+  - [Tailwind Merge]
+  - [Lucide Icons]
+  - [React Hook Form]
+  - [Zod]
+  - []
+
+---
+
+## 📦 Como Baixar e Rodar o Projeto
+
+Siga os passos abaixo para rodar o **Devstage** localmente:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Clone este repositório
+$ git clone https://github.com/vanessabrazuna/devstage.git
+
+# Acesse a pasta do projeto
+$ cd devstage
+
+# Instale as dependências
+$ npm install
+
+# Inicie o servidor de desenvolvimento
+$ npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Pronto! Agora é só acessar [http://localhost:3333](http://localhost:3333) no navegador. 📥✨
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-## Learn More
+## 🔗 Conexão com o Backend
 
-To learn more about Next.js, take a look at the following resources:
+Para conectar o **Devstage** ao backend, siga os passos abaixo:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Clone o repositório do backend disponível no link:  
+   [https://github.com/rocketseat-education/nlw-connect-node.git](https://github.com/rocketseat-education/nlw-connect-node.git)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+# Clone o backend
+$ git clone https://github.com/rocketseat-education/nlw-connect-node.git
 
-## Deploy on Vercel
+# Acesse a pasta do backend
+$ cd nlw-connect-node
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# Instale as dependências
+$ npm install
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# Rodar o docker
+$ docker compose up -d
+
+# Rodar as migrations
+$ npm run db:migrate
+
+# Inicie o servidor backend
+$ npm run dev
+```
+
+Por padrão, o servidor backend estará rodando em `http://localhost:3333`. Certifique-se de que o frontend está configurado para acessar esse endpoint.
+
+---
+
+## 📊 Documentação da API
+
+A documentação da API está disponível em:
+
+`http://localhost:3333/docs`
+
+Acesse para visualizar os endpoints, requisições e respostas suportadas pelo backend. 📝
+
+---
+
+## 👩‍💻 Desenvolvedora
+
+Feito com 💜 por **[Vanessa Brazuna](https://github.com/vanessabrazuna)**
+
+Conecte-se comigo no [LinkedIn](https://www.linkedin.com/in/vanessabrazuna) para acompanhar mais projetos incríveis! 🚀
+
+--- 
