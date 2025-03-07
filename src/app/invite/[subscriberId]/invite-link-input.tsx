@@ -1,22 +1,22 @@
-"use client";
+'use client'
 
-import { useState } from "react";
-import { Link, Copy, CheckCheck } from "lucide-react";
+import { useState } from 'react'
+import { Link, Copy, CheckCheck } from 'lucide-react'
 
-import { IconButton } from "@/app/components/icon-button";
-import { InputRoot, InputIcon, InputField } from "@/app/components/input";
+import { IconButton } from '@/app/components/icon-button'
+import { InputRoot, InputIcon, InputField } from '@/app/components/input'
 
 interface InviteLinkInputProps {
-  inviteLink: string;
+  inviteLink: string
 }
 
 export function InviteLinkInput({ inviteLink }: InviteLinkInputProps) {
-  const [copied, setCopied] = useState(false);
+  const [copied, setCopied] = useState(false)
 
   function CopyInviteLink() {
-    navigator.clipboard.writeText(inviteLink);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    navigator.clipboard.writeText(inviteLink)
+    setCopied(true)
+    setTimeout(() => setCopied(false), 2000)
   }
 
   return (
@@ -37,5 +37,5 @@ export function InviteLinkInput({ inviteLink }: InviteLinkInputProps) {
         </IconButton>
       </InputRoot>
     </div>
-  );
+  )
 }

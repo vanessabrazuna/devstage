@@ -1,8 +1,8 @@
-import Image from "next/image";
-import { Radio } from "lucide-react";
+import Image from 'next/image'
+import { Radio } from 'lucide-react'
 
-import logo from "@/assets/logo.svg";
-import { SubscriptionForm } from "@/app/(home)/subscription-form";
+import logo from '@/assets/logo.svg'
+import { SubscriptionForm } from '@/app/(home)/subscription-form'
 
 export default function Home() {
   return (
@@ -42,5 +42,5 @@ export default function Home() {
         <SubscriptionForm />
       </div>
     </div>
-  );
+  )
 }

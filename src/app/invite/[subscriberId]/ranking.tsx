@@ -1,13 +1,13 @@
-import Image from "next/image";
+import Image from 'next/image'
 
-import { getRanking } from "@/http/api";
+import { getRanking } from '@/http/api'
 
-import medalCooper from "@/assets/medal-cooper.svg";
-import medalGold from "@/assets/medal-gold.svg";
-import medalSilver from "@/assets/medal-silver.svg";
+import medalCooper from '@/assets/medal-cooper.svg'
+import medalGold from '@/assets/medal-gold.svg'
+import medalSilver from '@/assets/medal-silver.svg'
 
 export async function Ranking() {
-  const { ranking } = await getRanking();
+  const { ranking } = await getRanking()
 
   return (
     <div className="w-full max-w-[440px] space-y-5">
@@ -17,7 +17,7 @@ export async function Ranking() {
 
       <div className="space-y-4">
         {ranking.map((rank, index) => {
-          const rankingPosition = index + 1;
+          const rankingPosition = index + 1
 
           return (
             <div
@@ -25,7 +25,7 @@ export async function Ranking() {
               className="relative rounded-xl bg-gray-700 border border-gray-600 p-6 flex flex-col justify-center gap-3"
             >
               <span className="text-sm text-gray-300 leading-none">
-                <span className="font-semibold">{rankingPosition}&ordm;</span> |{" "}
+                <span className="font-semibold">{rankingPosition}&ordm;</span> |{' '}
                 {rank.name}
               </span>
 
@@ -57,7 +57,7 @@ export async function Ranking() {
                 />
               )}
             </div>
-          );
+          )
         })}
 
         {ranking.length === 0 && (
@@ -65,5 +65,5 @@ export async function Ranking() {
         )}
       </div>
     </div>
-  );
+  )
 }
