@@ -1,6 +1,7 @@
 'use client'
 
-import { Link, Copy } from "lucide-react"
+import { useState } from "react"
+import { Link, Copy, CheckCheck } from "lucide-react"
 
 import { IconButton } from "@/app/components/icon-button"
 import { InputRoot, InputIcon, InputField } from "@/app/components/input"
@@ -10,23 +11,30 @@ interface InviteLinkInputProps {
 }
 
 export function InviteLinkInput({ inviteLink }: InviteLinkInputProps) {
+  const [copied, setCopied] = useState(false)
+
   function CopyInviteLink() {
     navigator.clipboard.writeText(inviteLink)
+    setCopied(true)
+    setTimeout(() => setCopied(false), 2000)
   }
+
   return (
-    <InputRoot>
-      <InputIcon>
-        <Link className="size-5" />
-      </InputIcon>
+    <div className="relative w-full">
+      <InputRoot>
+        <InputIcon>
+          <Link className="size-5" />
+        </InputIcon>
 
-      <InputField
-        readOnly 
-        defaultValue={inviteLink} 
-      />
+        <InputField readOnly defaultValue={inviteLink} />
 
-      <IconButton className="-mr-2" onClick={CopyInviteLink}>
-        <Copy className="size-5" />
-      </IconButton>
-    </InputRoot>
+        <IconButton className="-mr-2" onClick={CopyInviteLink}>
+          {copied 
+            ? <CheckCheck className="size-5 text-green-500" /> 
+            : <Copy className="size-5" />
+          }
+        </IconButton>
+      </InputRoot>
+    </div>
   )
 }
