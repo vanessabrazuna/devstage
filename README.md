@@ -3,9 +3,7 @@
 
 <h1 align="center">📥  Devstage</h1>
 
-<p align="center">
-  <img src="https://imgur.com/a/devstage-Uc9QSc3" alt="Devstage" width="100%" />
-</p>
+![Cover](./.github/cover.png)
 
 <p align="center">
   <b>Plataforma para conectar desenvolvedores a comunidades e oportunidades em tecnologia. 🚀</b>
