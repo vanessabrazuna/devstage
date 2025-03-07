@@ -1,24 +1,24 @@
-'use client'
+"use client";
 
-import { ArrowRight, Mail, User } from 'lucide-react'
-import { useRouter, useSearchParams } from 'next/navigation'
-import { subscribeToEvent } from '@/http/api'
-import { zodResolver } from '@hookform/resolvers/zod'
-import { useForm } from 'react-hook-form'
-import { z } from 'zod'
-import { Button } from '../components/button'
-import { InputField, InputIcon, InputRoot } from '../components/input'
+import { ArrowRight, Mail, User } from "lucide-react";
+import { useRouter, useSearchParams } from "next/navigation";
+import { subscribeToEvent } from "@/http/api";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { Button } from "../components/button";
+import { InputField, InputIcon, InputRoot } from "../components/input";
 
 const subscriptionSchema = z.object({
-  name: z.string().min(2, 'Digite seu nome completo'),
-  email: z.string().email('Digite um e-mail válido'),
-})
+  name: z.string().min(2, "Digite seu nome completo"),
+  email: z.string().email("Digite um e-mail válido"),
+});
 
-type SubscriptionSchema = z.infer<typeof subscriptionSchema>
+type SubscriptionSchema = z.infer<typeof subscriptionSchema>;
 
 export function SubscriptionForm() {
-  const router = useRouter()
-  const searchParams = useSearchParams()
+  const router = useRouter();
+  const searchParams = useSearchParams();
 
   const {
     register,
@@ -26,13 +26,13 @@ export function SubscriptionForm() {
     formState: { errors },
   } = useForm<SubscriptionSchema>({
     resolver: zodResolver(subscriptionSchema),
-  })
+  });
 
   async function onSubscribe({ name, email }: SubscriptionSchema) {
-    const referrer = searchParams.get('referrer')
-    const { subscriberId } = await subscribeToEvent({ name, email, referrer })
+    const referrer = searchParams.get("referrer");
+    const { subscriberId } = await subscribeToEvent({ name, email, referrer });
 
-    router.push(`/invite/${subscriberId}`)
+    router.push(`/invite/${subscriberId}`);
   }
 
   return (
@@ -53,7 +53,7 @@ export function SubscriptionForm() {
             <InputField
               type="text"
               placeholder="Nome completo"
-              {...register('name')}
+              {...register("name")}
             />
           </InputRoot>
 
@@ -72,7 +72,7 @@ export function SubscriptionForm() {
             <InputField
               type="text"
               placeholder="E-mail"
-              {...register('email')}
+              {...register("email")}
             />
           </InputRoot>
 
@@ -89,5 +89,5 @@ export function SubscriptionForm() {
         <ArrowRight className="size-6" />
       </Button>
     </form>
-  )
+  );
 }

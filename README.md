@@ -1,14 +1,11 @@
-
 ---
-
 <h1 align="center">📥  Devstage</h1>
 
 ![Cover](./.github/cover.png)
 
 <p align="center">
-  <b>Plataforma para conectar desenvolvedores a comunidades e oportunidades em tecnologia. 🚀</b>
+<b>Plataforma para conectar desenvolvedores a comunidades e oportunidades em tecnologia. 🚀</b>
 </p>
-
 ---
 
 ## 📋 Índice
@@ -114,4 +111,4 @@ Feito com 💜 por **[Vanessa Brazuna](https://github.com/vanessabrazuna)**
 
 Conecte-se comigo no [LinkedIn](https://www.linkedin.com/in/vanessabrazuna) para acompanhar mais projetos incríveis! 🚀
 
---- 
+---

@@ -1,8 +1,8 @@
-import Image from 'next/image'
-import { Radio } from 'lucide-react'
+import Image from "next/image";
+import { Radio } from "lucide-react";
 
-import logo from '@/assets/logo.svg'
-import { SubscriptionForm } from '@/app/(home)/subscription-form'
+import logo from "@/assets/logo.svg";
+import { SubscriptionForm } from "@/app/(home)/subscription-form";
 
 export default function Home() {
   return (
@@ -11,8 +11,8 @@ export default function Home() {
         <Image src={logo} alt="devstage" width={108.5} height={30} />
 
         <h1 className="text-4xl text-center leading-none font-heading font-medium flex flex-col md:text-7xl md:text-left">
-          <span className="text-blue">CodeCraft</span> 
-            Summit {new Date().getFullYear()} 
+          <span className="text-blue">CodeCraft</span>
+          Summit {new Date().getFullYear()}
         </h1>
       </div>
 
@@ -41,6 +41,6 @@ export default function Home() {
 
         <SubscriptionForm />
       </div>
-    </div> 
-  )
+    </div>
+  );
 }
