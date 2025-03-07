@@ -1,5 +1,9 @@
 {
-  "extends": ["@rocketseat/eslint-config/next", "plugin:prettier/recommended"],
+  "extends": [
+    "@rocketseat/eslint-config/next",
+    "next/core-web-vitals",
+    "plugin:prettier/recommended"
+  ],
   "plugins": ["prettier"],
   "rules": {
     "prettier/prettier": "error"
