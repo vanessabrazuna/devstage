@@ -2,7 +2,7 @@ import Image from 'next/image'
 import { Radio } from 'lucide-react'
 
 import logo from '@/assets/logo.svg'
-import { SubscriptionForm } from '@/app/(home)/subscription-form'
+import { SubscriptionFormSkeleton } from './subscription-form-skeleton'
 
 export default function Home() {
   return (
@@ -39,7 +39,7 @@ export default function Home() {
           </p>
         </div>
 
-        <SubscriptionForm />
+        <SubscriptionFormSkeleton />
       </div>
     </div>
   )
