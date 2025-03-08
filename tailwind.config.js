@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const animate = require('tailwindcss-animate');
+
 module.exports = {
   content: [
     './app/**/*.{js,ts,jsx,tsx,mdx}',
@@ -31,7 +33,26 @@ module.exports = {
       borderRadius: {
         xl: '0.625rem',
       },
+      animation: {
+        dance: 'dance 3s infinite ease-in-out',
+      },
+      keyframes: {
+        dance: {
+          '0%, 100%': {
+            transform: 'translateY(0)',
+          },
+          '25%': {
+            transform: 'translateY(-15px)',
+          },
+          '50%': {
+            transform: 'translateY(0)',
+          },
+          '75%': {
+            transform: 'translateY(-15px)',
+          },
+        },
+      },
     },
   },
-  plugins: [],
-}
+  plugins: [animate],
+};

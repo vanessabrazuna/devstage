@@ -1,5 +1,6 @@
 'use client'
 
+import { Suspense } from 'react'
 import { ArrowRight, Mail, User } from 'lucide-react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { subscribeToEvent } from '@/http/api'
@@ -23,7 +24,7 @@ export function SubscriptionForm() {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isSubmitting },
   } = useForm<SubscriptionSchema>({
     resolver: zodResolver(subscriptionSchema),
   })
@@ -84,10 +85,22 @@ export function SubscriptionForm() {
         </div>
       </div>
 
-      <Button type="submit">
-        Confirmar
-        <ArrowRight className="size-6" />
-      </Button>
+      <Suspense fallback={<div className="text-gray-300">...</div>}>
+        <Button type="submit">
+          {isSubmitting ? (
+            <div className="flex items-center space-x-1">
+              <span className="dot animate-dance delay-200 w-2 h-2 bg-current rounded-full" />
+              <span className="dot animate-dance delay-400 w-2 h-2 bg-current rounded-full" />
+              <span className="dot animate-dance delay-600 w-2 h-2 bg-current rounded-full" />
+            </div>
+          ) : (
+            <>
+              Confirmar
+              <ArrowRight className="size-6" />
+            </>
+          )}
+        </Button>
+      </Suspense>
     </form>
   )
 }
