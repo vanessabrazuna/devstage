@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { Suspense } from "react"
 import { Radio } from 'lucide-react'
 
 import logo from '@/assets/logo.svg'
@@ -39,7 +40,9 @@ export default function Home() {
           </p>
         </div>
 
-        <SubscriptionForm />
+        <Suspense>
+          <SubscriptionForm />
+        </Suspense>
       </div>
     </div>
   )
