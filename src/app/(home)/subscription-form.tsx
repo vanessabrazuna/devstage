@@ -7,8 +7,9 @@ import { subscribeToEvent } from '@/http/api'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
-import { Button } from '../components/button'
-import { InputField, InputIcon, InputRoot } from '../components/input'
+
+import { Button } from '@/app/components/button'
+import { InputField, InputIcon, InputRoot } from '@/app/components/input'
 
 const subscriptionSchema = z.object({
   name: z.string().min(2, 'Digite seu nome completo'),
