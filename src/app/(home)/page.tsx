@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { Suspense } from "react"
+import { Suspense } from 'react'
 import { Radio } from 'lucide-react'
 
 import logo from '@/assets/logo.svg'
