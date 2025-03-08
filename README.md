@@ -36,6 +36,7 @@ O projeto foi desenvolvido com as seguintes ferramentas e bibliotecas modernas:
   - [TailwindCSS](https://tailwindcss.com/)
   - [Tailwind Merge](https://www.npmjs.com/package/tailwind-merge)
   - [Lucide Icons](https://lucide.dev/)
+  - [React Query](https://tanstack.com/query/latest)
   - [React Hook Form](https://www.react-hook-form.com/)
   - [Zod](https://zod.dev/)
   - [Orval](https://orval.dev/)
