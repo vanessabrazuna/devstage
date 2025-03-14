@@ -1,3 +1,4 @@
+
 ---
 <h1 align="center">📥  Devstage</h1>
 
@@ -6,6 +7,7 @@
 <p align="center">
 <b>Plataforma para conectar desenvolvedores a comunidades e oportunidades em tecnologia. 🚀</b>
 </p>
+
 ---
 
 ## 📋 Índice
