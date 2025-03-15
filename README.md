@@ -88,7 +88,10 @@ $ npm install
 $ docker compose up -d
 
 # Rodar as migrations
-$ npm run db:migrate
+$ npm drizzle-kit migrate
+
+# Copiar os arquivos env
+$ cp .env.example .env
 
 # Inicie o servidor backend
 $ npm run dev
