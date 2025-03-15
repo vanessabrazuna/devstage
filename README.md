@@ -72,14 +72,14 @@ Pronto! Agora é só acessar [http://localhost:3333](http://localhost:3333) no n
 Para conectar o **Devstage** ao backend, siga os passos abaixo:
 
 1. Clone o repositório do backend disponível no link:  
-   [https://github.com/rocketseat-education/nlw-connect-node.git](https://github.com/rocketseat-education/nlw-connect-node.git)
+   [https://github.com/vanessabrazuna/devstage-api.git](https://github.com/vanessabrazuna/devstage-api.git)
 
 ```bash
 # Clone o backend
-$ git clone https://github.com/rocketseat-education/nlw-connect-node.git
+$ git clone https://github.com/vanessabrazuna/devstage-api.git
 
 # Acesse a pasta do backend
-$ cd nlw-connect-node
+$ cd devstage-api
 
 # Instale as dependências
 $ npm install
